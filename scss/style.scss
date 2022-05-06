@@ -1,0 +1,124 @@
+@import "./variables";
+@import "./header";
+@import "./footer";
+@import "./menunav";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.body{
+    background-color: $colorBackground;
+    height: 100%;
+    width: 100%;
+}
+
+.body1{
+    
+    background-color: $colorBackground;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+.portada{
+    width: 28%;
+    margin-left: 35%;
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .grilla_nosotros{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+        "titulonosotros"
+        "img_nosotros2"
+        "texto_nosotros2"
+        "img_nosotros1"
+        "texto_nosotros1"; 
+        background-color:$colorBackgroundNosotros ;
+    }
+
+    .tablaHorarios{
+        border: 20%;
+        margin-bottom: 15%;
+        margin-top: 5%;
+        text-align: center;
+        border-spacing: 10px;
+        border-collapse: separate;
+        
+    }
+
+    .filas_columnas{
+        color:rgb(201, 138, 138);
+        font-family: $estilo;
+        font-size: 120%;
+    }
+    
+    .td{
+        font-family: $estilo;
+        color: $colorFrases;
+    }
+    .grillagaleria{
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-auto-rows: 400px;
+        grid-template-areas: 
+        "contenedor_img1" 
+        "contenedor_img2"
+        "contenedor_img3"
+        "contenedor_img4"
+        "contenedor_img5"
+        "contenedor_img6";
+        padding: 5%;
+        grid-gap: 10px;
+      
+      }
+
+    .footer{
+        display: grid;
+        grid-template-columns: row;
+        grid-template-areas: 
+        "bloque1 autor";
+        text-align: right;
+        background-color: $colorBackgroundNosotros;
+    }
+    .bloque1{
+        grid-area: bloque1;
+        margin-right: 1%;
+       
+    }
+    
+    .autor{
+        grid-area: autor;
+        height: 30%;
+        padding-top: 9%;
+        padding-right: 3%;
+    }
+    .botonactividades{
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        background-color: $colorBackgroundNosotros;
+        font-style: $estilo;
+        color: $colorFrases;
+        margin-bottom: 5%;
+        margin-right: 50%;
+      }
+
+    
+    
+
+}

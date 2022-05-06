@@ -1,0 +1,72 @@
+
+.footer{
+    display: grid;
+    grid-template-columns: row;
+    grid-template-areas: 
+    "bloque1 autor";
+    text-align: right;
+    background-color: $colorBackgroundNosotros;
+}
+
+.redessociales:hover{
+    transform: scale(1.5,1.5);
+}
+
+.redessociales2:hover{
+    @extend .redessociales:hover;
+}
+
+.redessociales3:hover{
+    @extend .redessociales:hover;
+}
+
+
+.bloque1{
+    grid-area: bloque1;
+    margin-right: 1%;
+   
+}
+
+.autor{
+    grid-area: autor;
+    height: 30%;
+    padding-top: 4%;
+    padding-right: 3%;
+}
+
+.redessociales{
+    width: 60px;
+}
+
+.redessociales2{
+    width: 60px;
+}
+
+.redessociales3{
+    width: 60px;
+}
+
+
+.footer{
+    div{
+        list-style: none;
+        margin-top: 1%;
+        margin-left: none;
+    }
+
+    
+}
+
+
+.ul1:hover{
+    transform: translate(10px);
+}
+
+.ul2:hover{
+    transform: translate(10px);
+}
+
+.ul3:hover{
+    transform: translate(10px);
+}
+

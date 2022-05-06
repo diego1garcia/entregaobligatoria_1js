@@ -1,0 +1,73 @@
+
+.menunavegacion{
+    margin-top: 5%;
+    margin-right: 30%;
+    background-color:$colorBackground;
+}
+
+
+
+.container-fluid{
+    background-color: $colorBackground;
+}
+
+
+.logo1{
+    width: 10%;
+    grid-area: logo1;
+}
+
+.logo2{
+    width: 6%;
+    grid-area: logo2;
+    margin-left: 46%;
+}
+
+
+.grilla1{
+    display: grid;
+    grid-template-columns: row;
+    grid-template-areas: 
+    "logo1 logo2";
+    background-color: $colorBackground;
+    width: 100%;
+    position:fixed;
+    z-index: 100;
+    
+    
+}
+
+
+.menunavegacion{
+    margin-top: 5%;
+    margin-right: 30%;
+    background-color:$colorBackground;
+}
+
+.grilla1{
+    display: grid;
+    grid-template-columns: row;
+    grid-template-areas: 
+    "logo1 logo2";
+    background-color: $colorBackground;
+}
+
+.container-fluid{
+    background-color: $colorBackground;
+}
+
+
+.logo1{
+    width: 10%;
+    grid-area: logo1;
+}
+
+.logo2{
+    width: 6%;
+    grid-area: logo2;
+    margin-left: 46%;
+}
+
+
+
+
