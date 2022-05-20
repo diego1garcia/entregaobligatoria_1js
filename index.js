@@ -154,7 +154,20 @@ const cargarTurnos = (datos, nodo, esTabla) => {
         acumulador += esTabla ? getRow(el) : getCard(el);
     })
     nodo.innerHTML = acumulador;
+    
 };
+
+
+
+// cargarLocalStorage();
+// function agregar(hora){
+//     let listaTurnos = JSON.parse(localStorage.getItem("turnos"));
+//     let turno = {id: listaTurnos.length +1, nombre: hora};
+
+//     listaTurnos.push(turno);
+//     localStorage.setItem("turnos", JSON.stringify(listaTurnos));
+// }
+
 
 const reservarClase = (id) =>{
     const seleccion = TURNOS.find(item => item.id===id)
@@ -169,6 +182,7 @@ const reservarClase = (id) =>{
 
     cargarTurnos(carrito, tablaCarrito, true);
     
+    localStorage.setItem("turnos", JSON.stringify(seleccion));
 
 
     
@@ -176,6 +190,25 @@ const reservarClase = (id) =>{
 
 cargarTurnos(TURNOS, contenedor, false);
 
+// function cargarLocalStorage(){
+//     const TurnosIniciales = [
+//         { id:1, nombre: "Turno 08:00 hs"},
+//         { id:2, nombre: "Turno 10:00 hs"},
+//     ];
+
+//     localStorage.setItem("turnos", JSON.stringify(TurnosIniciales));
+// }
 
 
+// cargarLocalStorage();
+// function agregar(hora){
+//     let listaTurnos = JSON.parse(localStorage.getItem("turnos"));
+//     let turno = {id: listaTurnos.length +1, nombre: hora};
 
+//     listaTurnos.push(turno);
+//     localStorage.setItem("turnos", JSON.stringify(listaTurnos));
+// }
+
+// let nombre = prompt("por favor ingresa el turno");
+
+// agregar(nombre);
