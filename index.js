@@ -1,97 +1,3 @@
-/*alert("Bienvenido al Sistema de turno online");
-
-
-
-let admin=prompt("Es Utd Administrador? s/n");
-if (admin==="s" || admin === "S"){
-    let userAdmin = prompt ("Ingrese Usuario Administrador: ");
-    let passAdmin = prompt ("Ingrese Contarseña: ");
-        if (userAdmin==="admin" && passAdmin==="admin"){
-            alert("Sistema para agregar turnos");
-            const turnos = ["08:00", "10:00", "12:00"];
-             let turno = prompt("agregue un turno");
-                alert(`"Usted a agregado el turno" ${turno} hs`)
-        }
-        if (userAdmin !="admin" && passAdmin !="admin"){
-            alert("El usuario o contraseña no coinciden")
-        }
-    }
-if (admin==="n" || admin ==="N"){
-    let registro=prompt("Se encuentra Registrado? s/n"); 
-
-
-//REGISTRO
-if(registro=="n" || registro=="N"){
-   
-    function Registro(usuario, contraseña, contraseña2){
-       this.usuario = usuario
-       this.contraseña = contraseña
-       this.contraseña2 = contraseña2
-    }
-
-    let usuario = prompt("ingrese su usuario")
-    let contraseña = prompt("ingrese su contraseña")
-    let contraseña2 = prompt("vuelva a ingresar su contraseña")
-    if(contraseña===contraseña2){
-        alert("registro correcto!");
-        
-    }
-    
-    else{
-        alert("Las contraseñas no coinciden")
-        
-    }
-    
-    
-
-
-    let otro="n"
-
-
-    while(otro=="n"){
-        const arr1 = ["08:00 - profe diana","10:00 profe jose", "12:00 - Profe Diana"];
-            alert(`"los horairos disponibles son " ${arr1}`)
-        let horario=prompt("Ingrese el horario que desea asistir (08:00 - Profe Diana , 10:00 - Profe Jose, 12:00 - Profe Diana): ");
-            alert(`"usted eligio el turno" ${horario}`)
-        
-
-     
-        otro=prompt("Desea elegir otro horario?s/n");
-    }
-
-    otro=prompt("Desea elegir otro horario?s/n");
-
-    
-
-}
-
-
-
-
-//login y seleccion
-if(registro=="s" || registro=="S"){
-    let usuario=prompt("Ingrese el usuario:");
-    let pass=prompt("ingrese contraseña:");
-    alert("Ingreso Correcto");
-    let otro="s";
-    
-
-    while(otro=="s"){
-        const arr1 = ["08:00 - profe diana","10:00 profe jose", "12:00 - Profe Diana"];
-            alert(`"los horairos disponibles son " ${arr1}`)
-        let horario=prompt("Ingrese el horario que desea asistir (08:00 - Profe Diana , 10:00 - Profe Jose, 12:00 - Profe Diana): ");
-            alert(`"usted eligio el turno" ${horario}`)
-        
-
-     
-        otro=prompt("Desea elegir otro horario?s/n");
-
-    }
-   
-}
-}*/
-
-
 
 const contenedor = document.getElementById("turnos");
 
@@ -159,14 +65,6 @@ const cargarTurnos = (datos, nodo, esTabla) => {
 
 
 
-// cargarLocalStorage();
-// function agregar(hora){
-//     let listaTurnos = JSON.parse(localStorage.getItem("turnos"));
-//     let turno = {id: listaTurnos.length +1, nombre: hora};
-
-//     listaTurnos.push(turno);
-//     localStorage.setItem("turnos", JSON.stringify(listaTurnos));
-// }
 
 
 const reservarClase = (id) =>{
@@ -190,25 +88,31 @@ const reservarClase = (id) =>{
 
 cargarTurnos(TURNOS, contenedor, false);
 
-// function cargarLocalStorage(){
-//     const TurnosIniciales = [
-//         { id:1, nombre: "Turno 08:00 hs"},
-//         { id:2, nombre: "Turno 10:00 hs"},
-//     ];
+const boton = document.getElementById("boton");
 
-//     localStorage.setItem("turnos", JSON.stringify(TurnosIniciales));
-// }
+boton.addEventListener('click', () => {
 
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Usted acaba de reservar su turno',
+        showConfirmButton: false,
+        timer: 1500
+      })
 
-// cargarLocalStorage();
-// function agregar(hora){
-//     let listaTurnos = JSON.parse(localStorage.getItem("turnos"));
-//     let turno = {id: listaTurnos.length +1, nombre: hora};
+});
 
-//     listaTurnos.push(turno);
-//     localStorage.setItem("turnos", JSON.stringify(listaTurnos));
-// }
+const boton1 = document.getElementById("boton1");
 
-// let nombre = prompt("por favor ingresa el turno");
+boton1.addEventListener('click', () => {
 
-// agregar(nombre);
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Se borraron sus turnos',
+        showConfirmButton: false,
+        timer: 1500
+      })
+
+});
+
