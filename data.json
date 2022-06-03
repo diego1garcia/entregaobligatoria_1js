@@ -1,0 +1,7 @@
+[
+    {"nombre": "turno 8 Am", "disponibles": 5, "id": 1},
+    {"nombre": "turno 9 am", "disponibles": 7, "id": 2},
+    {"nombre": "turno 10 am", "disponibles": 2, "id": 3},
+    {"nombre": "turno 11 am", "disponibles": 4, "id": 4},
+    {"nombre": "turno 12 am", "disponibles": 4, "id": 5}
+  ] 
