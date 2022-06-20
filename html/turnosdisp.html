@@ -51,27 +51,58 @@
     <!--comienzo cuerpo seccion contacto-->
     <section class="cuerpo">
     <header>
-    <div>
-        <h1 class="titulocontacto">Inicio de Sesion Alumnos</h1>
-        <form action="./turnosdisp.html" class="formulario">
-          <div class="mb-3">
-            <label for="exampleInputName1" class="form-label">Usuario</label>
-            <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
-          <div>
-            <div class="mb-3">
-                <label for="exampleInputName1" class="form-label">Contraseña</label>
-                <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
-              </div>
-          </div>
-          
-          <button type="submit" class="btnEnviar">Ingresar</button>
-          
-        </form>
-      </div>
-    </header>
-    </section>
- 
+    
+    
+    <div class="container">
+      <div id="turnos" class="d-flex row flex-wrap m-3"></div>
 
+    </div>
+
+    <div>
+      <!-- Button trigger modal -->
+<button id="turnoSeleccionado" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+  Turnos Seleccionados
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5  class="modal-title" id="exampleModalLabel">Reservar Turno</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Profesora</th>
+              <th scope="col">Lugares</th>
+              <th scope="col">Imagen</th>
+            </tr>
+          </thead>
+          <tbody id="tablaCarrito">
+            
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button id="boton1" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Borrar Turnos</button>
+        <button id="boton" type="button" class="btn btn-primary">Guardar Turnos</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+   
+    <form action="../turnosdisp.html">
+      <button type="submit" class="botonactividades">TURNOS DISPONIBLES</button>
+    </form>
+    
    
     <!--fin cuerpo seccion contacto-->
   <footer class="footer">
@@ -85,7 +116,8 @@
     <div class="autor">
         Copyright By DG
     </div>
-        
+</header>
+</section>      
   </footer> 
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../index.js"></script> 
